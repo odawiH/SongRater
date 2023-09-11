@@ -1,0 +1,77 @@
+.event-content-card {
+  border-radius: 25px !important;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+
+  --column-padding: 30px;
+}
+
+.card-desktop {
+  align-items: center;
+  min-width: 600px;
+  // height: 400px;
+}
+.buttons {
+  justify-content: center !important;
+  align-items: center !important;
+
+  // margin: 4rem;
+  margin: 2rem 4rem 3rem 4rem;
+}
+.track-info {
+  flex-direction: column !important;
+
+  align-items: center !important;
+}
+.track-info-desktop {
+  margin-top: 2rem;
+}
+
+.coverImage {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 0px 0px 6px 1px rgba(94, 94, 94, 0.7);
+  margin-top: 2.4em;
+  margin-left: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.imageMobile {
+  width: 70%;
+  margin-left: 0rem;
+  margin-bottom: 1rem;
+}
+
+::ng-deep .mat-mdc-mini-fab.mat-accent {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.green-icon {
+  color: rgb(31, 108, 31);
+}
+
+.red-icon {
+  color: rgb(131, 24, 24);
+}
+
+.artist {
+  font-size: 20px !important;
+  font-weight: bold;
+}
+
+.artist-info {
+  margin-left: 1rem !important;
+  font-size: 16px !important;
+  align-self: center;
+  font-weight: 500;
+  inline-size: 200px;
+  overflow-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Hier auf 2 setzen, um nach zwei vollen Zeilen abzuschneiden */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
