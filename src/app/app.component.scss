@@ -1,0 +1,71 @@
+.card-container {
+  // background-color: #4158d0;
+  // background-image: linear-gradient(
+  //   43deg,
+  //   #4158d0 0%,
+  //   #c850c0 46%,
+  //   #ffcc70 100%
+  // );
+
+  background-color: #1db954;
+  background-image: -webkit-linear-gradient(
+    157deg,
+    #1db954 0%,
+    #000000 29%,
+    #1db954 84%
+  );
+  background-image: -moz-linear-gradient(
+    157deg,
+    #1db954 0%,
+    #000000 29%,
+    #1db954 84%
+  );
+  background-image: -o-linear-gradient(
+    157deg,
+    #1db954 0%,
+    #000000 29%,
+    #1db954 84%
+  );
+  background-image: linear-gradient(
+    157deg,
+    #1db954 0%,
+    #000000 29%,
+    #1db954 84%
+  );
+
+  justify-content: center; /* Vertikal zentrieren */
+  align-items: center; /* Horizontal zentrieren */
+  padding: 15px;
+  // height: 100vh; /* 100% der Bildschirmhöhe verwenden */
+  text-align: center;
+}
+
+.card-container-desktop {
+  height: 100%;
+}
+
+.card {
+  //   max-height: 600px;
+  // display: flex;
+  // flex-direction: row;
+  // width: 100%; /* Karten nehmen 100% der verfügbaren Breite */
+  // height: 100%;
+  //   max-width: 400px !important; /* Maximale Breite für die Karten */
+  text-align: center;
+  margin: 1rem; /* Abstand oben und unten */
+  // box-sizing: border-box;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+.card-Buttons {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.mat-mdc-progress-spinner {
+  --mdc-circular-progress-active-indicator-color: #c7c7c7 !important;
+}
