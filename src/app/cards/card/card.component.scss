@@ -10,13 +10,10 @@
 .card-desktop {
   align-items: center;
   min-width: 600px;
-  // height: 400px;
 }
 .buttons {
   justify-content: center !important;
   align-items: center !important;
-
-  // margin: 4rem;
   margin: 2rem 4rem 3rem 4rem;
 }
 .track-info {
@@ -73,7 +70,7 @@
   inline-size: 200px;
   overflow-wrap: break-word;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Hier auf 2 setzen, um nach zwei vollen Zeilen abzuschneiden */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;

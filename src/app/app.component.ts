@@ -64,11 +64,11 @@ export class AppComponent implements OnInit {
             'https://images.genius.com/28287cc9efed5371676ff501f3ca738f.1000x1000x1.jpg',
         },
       ];
-    }, 500);
+      this.cardAnimation = 'in';
+      this.isTrackAvailable = true;
+      this.isLoading = false;
+    }, 700);
 
-    this.cardAnimation = 'in';
-    this.isTrackAvailable = true;
-    this.isLoading = false;
     this.chartData = [
       { label: 'Total', value: this.totalCounter },
       { label: 'Liked', value: this.likedCounter },

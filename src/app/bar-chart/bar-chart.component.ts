@@ -39,14 +39,12 @@ export class BarChartComponent implements OnInit, OnChanges {
   }
 
   private createBarChart(): void {
-    // Löschung des vorherigen Diagramms
     d3.select(this.el.nativeElement).select('svg').remove();
 
     const margin = { top: 25, right: 20, bottom: 30, left: 60 };
     const width = 400 - margin.left - margin.right;
     const height = 300 - margin.top - margin.bottom;
 
-    // Hier fügen wir die "color"-Eigenschaft hinzu, um die Farbe für jeden Balken festzulegen
     this.data.forEach((d) => {
       d.color =
         d.label === 'Liked'
@@ -86,7 +84,7 @@ export class BarChartComponent implements OnInit, OnChanges {
       .attr('y', (d) => y(d.value))
       .attr('width', x.bandwidth())
       .attr('height', (d) => height - y(d.value))
-      .attr('fill', (d) => d.color || 'black'); // Verwende die "color"-Eigenschaft zur Farbzuweisung
+      .attr('fill', (d) => d.color || 'black');
 
     svg
       .selectAll('text.bar')

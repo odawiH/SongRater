@@ -1,10 +1,3 @@
-import {
-  animate,
-  state,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -15,7 +8,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   animations: [],
 })
 export class CardComponent {
-  // @Input() tracklist: Tracks[] = [];
   @Input() artist?: string;
   @Input() title?: string;
   @Input() imageUrl?: string;
