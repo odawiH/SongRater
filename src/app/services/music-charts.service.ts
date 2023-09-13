@@ -9,27 +9,27 @@ import { environment } from 'src/environments/environment';
 export class MusicChartsService {
   constructor(private httpClient: HttpClient) {}
 
-  // getMusicCharts(): Observable<any> {
-  //   return this.httpClient
-  //     .get<any>(environment.shazamApiBaseUrl, {
-  //       headers: new HttpHeaders()
-  //         .set(
-  //           environment.XRapidAPIHostHeaderName,
-  //           environment.XRapidAPIHostHeaderValue
-  //         )
-  //         .set(
-  //           environment.XRapidAPIKeyHeaderName,
-  //           environment.XRapidAPIKeyHeaderValue
-  //         ),
-  //     })
-  //     .pipe(
-  //       map((response: any) =>
-  //         response.chart_items.map((chartItem: any) => ({
-  //           title: chartItem.item.title,
-  //           artist: chartItem.item.artist_names,
-  //           imageUrl: chartItem.item.song_art_image_url,
-  //         }))
-  //       )
-  //     );
-  // }
+  getMusicCharts(): Observable<any> {
+    return this.httpClient
+      .get<any>(environment.shazamApiBaseUrl, {
+        headers: new HttpHeaders()
+          .set(
+            environment.XRapidAPIHostHeaderName,
+            environment.XRapidAPIHostHeaderValue
+          )
+          .set(
+            environment.XRapidAPIKeyHeaderName,
+            environment.XRapidAPIKeyHeaderValue
+          ),
+      })
+      .pipe(
+        map((response: any) =>
+          response.chart_items.map((chartItem: any) => ({
+            title: chartItem.item.title,
+            artist: chartItem.item.artist_names,
+            imageUrl: chartItem.item.song_art_image_url,
+          }))
+        )
+      );
+  }
 }

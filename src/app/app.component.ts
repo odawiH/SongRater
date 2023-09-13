@@ -32,42 +32,11 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLoading = true;
-    // this.musicChartsService.getMusicCharts().subscribe((musicCharts) => {
-    //   this.tracklist = musicCharts;
-    //   this.isTrackAvailable = true;
-    //   this.isLoading = false;
-    // });
-    setTimeout(() => {
-      this.tracklist = [
-        {
-          artist: 'John',
-          title: 'Mawimba',
-          imageUrl:
-            'https://images.genius.com/4164dff756ddd455675789bd67fe5f1a.1000x1000x1.png',
-        },
-        {
-          artist: 'Eminem',
-          title: 'Rap God',
-          imageUrl:
-            'https://images.genius.com/058e2359838c93395c36119b48a2eff6.1000x1000x1.png',
-        },
-        {
-          artist: 'Big Shaq Featuring Big Byz in da club',
-          title: 'Mans Not Hot by Big Shaq and Big Boyz',
-          imageUrl:
-            'https://images.genius.com/fda7cc8f2cb7787981d61c15359192c0.1000x1000x1.png',
-        },
-        {
-          artist: 'Rihanna (Ft. Drake)',
-          title: 'Work',
-          imageUrl:
-            'https://images.genius.com/28287cc9efed5371676ff501f3ca738f.1000x1000x1.jpg',
-        },
-      ];
-      this.cardAnimation = 'in';
+    this.musicChartsService.getMusicCharts().subscribe((musicCharts) => {
+      this.tracklist = musicCharts;
       this.isTrackAvailable = true;
       this.isLoading = false;
-    }, 700);
+    });
 
     this.chartData = [
       { label: 'Total', value: this.totalCounter },
