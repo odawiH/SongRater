@@ -1,6 +1,6 @@
 export interface Tracks {
-  tracks: any;
+  tracks?: any;
   title: string;
-  subtitle: string;
+  artist: string;
   imageUrl: string;
 }

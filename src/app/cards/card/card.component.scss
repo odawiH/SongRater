@@ -23,6 +23,7 @@
   flex-direction: column !important;
 
   align-items: center !important;
+  margin-bottom: 2rem;
 }
 .track-info-desktop {
   margin-top: 2rem;
@@ -36,6 +37,7 @@
   margin-top: 2.4em;
   margin-left: 1.2rem;
   margin-bottom: 2.4rem;
+  max-height: 350px;
 }
 
 .imageMobile {
@@ -59,10 +61,12 @@
 .artist {
   font-size: 20px !important;
   font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .artist-info {
-  margin-left: 1rem !important;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
   font-size: 16px !important;
   align-self: center;
   font-weight: 500;

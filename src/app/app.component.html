@@ -8,9 +8,14 @@
     <mat-spinner></mat-spinner>
   </div>
   <div *ngIf="!isLoading" fxLayoutAlign="center center" fxLayout="column">
-    <div class="card" ngClass.gt-xs="card-desktop" *ngIf="isTrackAvailable">
+    <div
+      class="card"
+      ngClass.gt-xs="card-desktop"
+      *ngIf="isTrackAvailable"
+      [@voted]="cardAnimation"
+    >
       <app-card
-        [artist]="tracklist[currentIndex].subtitle"
+        [artist]="tracklist[currentIndex].artist"
         [title]="tracklist[currentIndex].title"
         [imageUrl]="tracklist[currentIndex].imageUrl"
         (thumbUpClicked)="liked()"
@@ -23,13 +28,7 @@
       </h2>
     </div>
     <div class="card" ngClass.gt-xs="card-desktop">
-      <app-card
-        [artist]="tracklist[currentIndex].subtitle"
-        [title]="tracklist[currentIndex].title"
-        [imageUrl]="tracklist[currentIndex].imageUrl"
-      ></app-card>
+      <app-bar-chart [data$]="data$"></app-bar-chart>
     </div>
   </div>
 </div>
-
-<router-outlet></router-outlet>

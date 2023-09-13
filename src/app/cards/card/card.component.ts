@@ -1,11 +1,18 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Tracks } from 'src/app/models/track.model';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
 
   styleUrls: ['./card.component.scss'],
+  animations: [],
 })
 export class CardComponent {
   // @Input() tracklist: Tracks[] = [];
@@ -20,7 +27,6 @@ export class CardComponent {
     this.thumbUpClicked.emit();
   }
 
-  // Methode, um das "Thumb Down" Event auszulösen
   disliked() {
     this.thumbDownClicked.emit();
   }

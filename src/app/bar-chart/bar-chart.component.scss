@@ -1,0 +1,24 @@
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: orange;
+}
+
+.axis-labels {
+  font-size: 20px;
+}
+.x-axis text,
+.y-axis text {
+  font-size: 20px !important; /* Du kannst die gewünschte Schriftgröße hier einstellen */
+}
+
+.x-axis path,
+.x-axis line,
+.y-axis path,
+.y-axis line {
+  fill: none;
+  shape-rendering: crispEdges;
+  color: #ccc;
+}
